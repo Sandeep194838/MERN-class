@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+
+body{
+    margin:0;
+}
+
+form{
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/02/22/53/background-1792968_960_720.jpg');
+    background-size: cover;
+    height: 120vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    border: none;
+    backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.3);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px white;
+    width: 300px;
+}
+
+h1{
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(red,gold,green);
+    background-clip: text;
+    font-size: 35px;
+    font-family: cursive;
+}
+
+label{
+    color: rgb(255, 80, 40);
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+<!--INPUT FIELDS-->
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"]{
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.option{
+    color: white;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+<!-- ALIGN RADIO & CHECKBOX -->
+.group{
+    margin-left: 5px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    background: salmon;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: red;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<form onsubmit="return validateForm()">
+<fieldset>
+
+<h1>Registration Form</h1>
+
+<label>Full Name:</label><br>
+<input type="text" id="fname" required placeholder="Fullname"><br><br>
+
+<label>Email:</label>
+<input type="email" id="email" required placeholder="Email"><br><br>
+
+<label>Password:</label>
+<input type="password" id="password" required placeholder="Password"><br><br>
+
+<label>Confirm Password:</label>
+<input type="password" id="confirm_password" required placeholder="Confirm Password"><br><br>
+
+
+<label>Gender:</label><br>
+<div class="group">
+    <input type="radio" name="gender" id="male">
+    <label for="male" class="option">Male</label><br>
+
+    <input type="radio" name="gender" id="female">
+    <label for="female" class="option">Female</label><br>
+
+    <input type="radio" name="gender" id="other">
+    <label for="other" class="option">Other</label>
+</div>
+
+<br>
+
+<label>Hobbies:</label><br>
+<div class="group">
+    <input type="checkbox" id="reading">
+    <label for="reading" class="option">Reading</label><br>
+
+    <input type="checkbox" id="sports">
+    <label for="sports" class="option">Sports</label><br>
+
+    <input type="checkbox" id="music">
+    <label for="music" class="option">Music</label>
+</div>
+
+<br>
+
+<label>Date of Birth:</label>
+<input type="date">
+
+<br><br>
+
+<input type="submit" value="Register">
+
+</fieldset>
+</form>
+
+<script>
+function validateForm() {
+    var pass = document.getElementById("password").value;
+    var confirmPass = document.getElementById("confirm_password").value;
+
+    if (pass !== confirmPass) {
+        alert("Passwords do not match!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>

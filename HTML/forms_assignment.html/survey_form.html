@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #eabd74;
+        }
+
+        form{
+            background: rgb(208, 209, 208);
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"]{
+            width: auto;
+        }
+
+        input[type="submit"]{
+            background: blue;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover{
+            background: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+
+    <h2>Survey Form</h2>
+
+    <!-- User Name -->
+    <label>User Name:</label>
+    <input type="text" required placeholder="Username">
+
+    <!-- Feedback -->
+    <label>Feedback:</label>
+    <textarea rows="4" placeholder="Your feedback here..."></textarea>
+
+    <!-- Rating -->
+    <label>Rating (1–5):</label><br>
+    <input type="radio" name="rating"> 1⭐
+    <input type="radio" name="rating"> 2⭐
+    <input type="radio" name="rating"> 3⭐
+    <input type="radio" name="rating"> 4⭐
+    <input type="radio" name="rating"> 5⭐
+    <br><br>
+
+    <!-- Favorite Technology -->
+    <label>Favorite Technology:</label>
+    <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>Java</option>
+    </select>
+
+    <!-- Subscribe -->
+    <label>
+        <input type="checkbox"> Subscribe
+    </label><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Request Form</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: #ca6464;
+        }
+
+        form{
+            width: 320px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+        }
+
+        input[type="radio"]{
+            width: auto;
+        }
+
+        .priority{
+            margin-bottom: 12px;
+        }
+
+        input[type="submit"]{
+            background: green;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover{
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+
+    <h2>Service Request</h2>
+
+    <!-- Customer Name -->
+    <label>Customer Name:</label>
+    <input type="text" required placeholder="Customer name">
+
+    <!-- Contact Number -->
+    <label>Contact Number:</label>
+    <input type="tel" required placeholder="Contact number">
+
+    <!-- Issue Type -->
+    <label>Issue Type:</label>
+    <select required>
+        <option value="">--Select Issue--</option>
+        <option>Laptop Repair</option>
+        <option>Internet Issue</option>
+        <option>Software Installation</option>
+        <option>Hardware Problem</option>
+    </select>
+
+    <!-- Description -->
+    <label>Description:</label>
+    <textarea rows="4" placeholder="Describe your issue"></textarea>
+
+    <!-- Priority -->
+    <label>Priority:</label><br>
+    <div class="priority">
+        <input type="radio" name="priority"> Low
+        <input type="radio" name="priority"> Medium
+        <input type="radio" name="priority"> High
+    </div>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit Request">
+
+</form>
+
+</body>
+</html>
