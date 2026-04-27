@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after{
+            content:"class";
+            color:red;
+        }
+
+        label::after{
+            content:"*";
+            color: red;
+        }
+
+        #heading::before{
+            content:"👋";
+        }
+        
+        label:last-of-type::before{
+            content:"📧";
+        }
+
+        label:first-of-type::before{
+            content:"👤";
+        }
+
+        h2::first-letter{
+            font-size: 50px;
+            color: red;
+            font-style:italic;
+            text-shadow:3px 3px 3px blue;
+        }
+
+        p::first-line{
+            color:antiquewhite;
+            background-color: black;
+            font-style: italic;
+            font-type: bold;
+        }
+
+        li:first-child::marker{
+            content:"👍"
+        }
+
+        li:nth-child(2)::marker{
+            content:"👎"
+        }
+
+        li:nth-child(3)::marker,:nth-child(4)::marker{
+            content:"🤞"
+        } 
+
+        div::selection{
+            color:burlywood;
+            background-color: darkorchid;
+        }
+
+        p::selection{
+            color: black;
+            background-color: antiquewhite;
+        }
+
+        input::placeholder{
+            color:salmon;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to day-6 </h1>
+    <form actions="">
+        <fieldset>
+            <h2>Registration Form</h2>
+            <label for="">First Name</label>
+            <input type="text" placeholder="Enter first name">
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter email">
+        </fieldset>
+    </form>
+
+    <ol>
+        <li>list items-1</li>
+        <li>list items-2</li>
+        <li>list items-3</li>
+        <li>list items-4</li>
+    </ol>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita ea error odio illum, obcaecati earum cum officiis esse? Repellendus voluptatibus neque obcaecati perspiciatis ipsum velit saepe at laudantium reprehenderit dicta!
+        Facilis accusantium dolorem, tempora est dignissimos ex excepturi libero culpa, velit itaque suscipit maxime at ad modi pariatur, quos vel incidunt voluptatibus odio totam ducimus. Reprehenderit nobis eveniet saepe facere!
+        Reiciendis, sunt. Nisi temporibus quam possimus vero aspernatur omnis consequuntur impedit et facere totam? Incidunt, ipsa vitae. Commodi illum explicabo doloribus accusamus eius alias necessitatibus mollitia incidunt. Adipisci, velit atque!
+    </p>
+
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, eum consectetur architecto vitae maxime deleniti minus eligendi accusamus voluptas mollitia error consequuntur. Error modi aperiam sunt, ipsam incidunt inventore corporis.
+        Soluta cumque possimus a consectetur aliquid laborum maxime sed amet esse aspernatur. Laboriosam facere fugit amet asperiores repudiandae voluptates sapiente iste suscipit quo accusantium cum, esse voluptatum repellat dolorum at!
+    </div>
+</body>
+</html>
